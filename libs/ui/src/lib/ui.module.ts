@@ -7,7 +7,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProfileGridComponent } from './profile-grid/profile-grid.component';
 
 @NgModule({
-  imports: [ CommonModule, MatCardModule, MatButtonModule, MatTableModule ],
+  imports: [ 
+    CommonModule, 
+    MatCardModule, 
+    MatButtonModule,
+    MatTableModule
+   ],
   declarations: [ ProfileCardComponent, ProfileGridComponent ],
   exports: [ ProfileCardComponent, ProfileGridComponent ]
 })
