@@ -1,5 +1,9 @@
 <h1 class="mat-display-1">Profile Details</h1>
-
-<!-- Code Here -->
-<!-- Use the 'profile card' UI component HERE to display the user profile details  -->
-<monofunworkspace-profile-card></monofunworkspace-profile-card>
+<!-- If Error - show the error message to the user-->
+<div *ngIf="error">
+    Oops! Something went wrong. Please try again later. {{error}}
+</div>
+<!-- If no error - pass the user profile to the child profile-card component for displaying user details-->
+<div *ngIf="!error">
+    <monofunworkspace-profile-card [user]="userData.userProfile"></monofunworkspace-profile-card>
+</div>

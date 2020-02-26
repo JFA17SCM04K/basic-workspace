@@ -1,0 +1,9 @@
+<h1 class="mat-display-1">Profiles Grid</h1>
+<!-- Incase of error - display the error message-->
+<div *ngIf="error">
+    Oops! Something went wrong. Please try again later. {{error}}
+</div>
+<div *ngIf="!error">
+    <!-- If no error, pass UserProfile to the Child Component to show users in grid-->
+    <monofunworkspace-profile-grid [users]="userProfile"></monofunworkspace-profile-grid>
+</div>
